@@ -1,7 +1,5 @@
-#
-# Amazon browsing traffic profile
 # 
-# Author: @harmj0y
+# Modified version of @harmj0y's Amazon profile
 #
 
 set sleeptime "3000";
@@ -80,4 +78,21 @@ http-post {
             print;
         }
     }
+}
+
+post-ex {
+
+    set spawnto_x86 "%windir%\\syswow64\\svchost.exe -k netsvcs";
+    set spawnto_x64 "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe";
+
+    # scrambles the content of the post-ex DLLs and settles the post-ex capability into memory in a more OPSEC-safe way.
+    set obfuscate "true";
+
+    # pass key function pointers from Beacon to its child jobs
+    set smartinject "true";
+
+    # disable AMSI in powerpick, execute-assembly, and psinject
+    set amsi_disable "true"; 
+    # CAUTION!  Crashes temporary post-ex processes for latest win 10 
+    
 }
