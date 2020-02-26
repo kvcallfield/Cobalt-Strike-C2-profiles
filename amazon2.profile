@@ -2,7 +2,7 @@
 # Modified version of @harmj0y's Amazon profile
 #
 
-set sleeptime "3000";
+set sleeptime "300";
 set jitter    "0";
 set maxdns    "255";
 set useragent "Mozilla/5.1 (Windows NT 7.0; WOW64; Trident/7.1; rv:12.0) like Gecko";
